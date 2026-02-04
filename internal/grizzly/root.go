@@ -54,6 +54,9 @@ func NewRootCmd() *cobra.Command {
 			opts.Timeout = cfg.Timeout
 		}
 
+		opts.JSON = !opts.Plain
+		opts.EnableCallback = !opts.NoCallback
+
 		if opts.JSON && opts.Plain {
 			return usageError(cmd, "--json and --plain are mutually exclusive")
 		}

@@ -79,7 +79,7 @@ func (o *Outputter) writeJSON(res Result, errInfo *ErrorInfo) {
 	}{
 		OK:     errInfo == nil,
 		Action: res.Action,
-		URL:    res.URL,
+		URL:    "", /*res.URL,*/
 		Data:   res.Data,
 		Error:  errInfo,
 	}

@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/tylerwince/grizzly/internal/grizzly"
+	"grizzly/internal/grizzly"
 )
 
 func main() {

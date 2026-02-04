@@ -1,4 +1,4 @@
-module github.com/tylerwince/grizzly
+module grizzly
 
 go 1.21
 

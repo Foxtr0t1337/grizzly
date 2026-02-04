@@ -31,7 +31,7 @@ func StartCallbackServer() (*CallbackServer, error) {
 		return nil, err
 	}
 
-	baseURL := fmt.Sprintf("http://%s", ln.Addr().String())
+	baseURL := fmt.Sprintf("gzlcb://%s", ln.Addr().String())
 	server := &CallbackServer{
 		BaseURL:    baseURL,
 		SuccessURL: baseURL + "/success",

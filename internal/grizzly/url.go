@@ -14,7 +14,7 @@ func BuildURL(action string, params url.Values) string {
 		Path:   "/" + action,
 	}
 	if params != nil && len(params) > 0 {
-		u.RawQuery = params.Encode()
+		u.RawQuery = strings.ReplaceAll(params.Encode(), "+", "%20")
 	}
 	return u.String()
 }
